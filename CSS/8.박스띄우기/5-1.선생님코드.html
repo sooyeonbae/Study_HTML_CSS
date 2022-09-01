@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            width: 50%;
+            padding: 5px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        .inner {
+            width: 25%;
+            padding: 5px;
+            float: left;
+            box-sizing: border-box; /*25% 비율안망가뜨리고 맞추기*/
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .inner .content {
+            border: 1px solid black;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container clearfix">
+        <div class="inner">
+            <div class="content">
+                <img src="./img/fish.png" alt="물고기">
+                <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="content">
+                <img src="./img/fish.png" alt="물고기">
+                <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="content">
+                <img src="./img/fish.png" alt="물고기">
+                <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="content">
+                <img src="./img/fish.png" alt="물고기">
+                <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="content">
+                <img src="./img/fish.png" alt="물고기">
+                <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="content">
+                <img src="./img/fish.png" alt="물고기">
+                <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="content">
+                <img src="./img/fish.png" alt="물고기">
+                <div>모든패딩 5px</div>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="content">
+                <img src="./img/fish.png" alt="물고기">
+                <div>모든패딩 5px</div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

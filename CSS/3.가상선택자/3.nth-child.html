@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        .fruits > li:nth-child(4)  {    /*fruits의 자식들 li중에 4번째 자식*/
+            color:orangered
+        }
+
+        .fruits > li:nth-child(even) {      /*fruits의 자식들 li중에 짝수 (짝수:even, 홀수:odd)*/
+            color:blue;                 /*마지막으로지정된 디자인요소가 부여돼서 망고도 파랑색*/
+        }
+
+        .fruits > li:nth-child(odd) {
+            color:pink;
+        }
+
+        /* n키워드 사용시 0부터 해석된다. */
+        .fruits > li:nth-child(3n+1) {   /*1,4,7번째 : 방정식으로*/
+            font-style: italic;
+        }
+
+        .food p:nth-child(1) { /*food클래스의 p태그중 첫번째 ->안먹힌다.
+                                (첫번째자식이 p가 아니라 괴리가생김)*/
+            color:violet;
+        }
+
+        /*p태그 중 첫번째 쓰는 법
+        :nth-of-type() : 같은 종류의 요소 중 n번째 요소*/
+        .food p:nth-of-type(1) { 
+            color:blueviolet;
+        }
+
+        .box-group div:nth-child(3) div:first-child {
+            /*선생님거 : .box-group > div > div:nth-child(1) 
+            어차피 자식이있는애는 3번밖에없어서 걔 지정은 그냥 div로만씀.*/
+            color:red;
+            font-weight: bold;
+        }
+
+        /* not:제외하고싶은것 - not에 넣은거 빼고 다 적용시켜라*/
+        .fuits li:not(.orange) { /*fruits클래스의 안쪽에 li요소들인데 클래스이름이 orange인 애 빼고 적용*/
+            list-style: none;  
+        }
+
+
+    </style>
+
+<body>
+
+    <ul class="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li class="orange">오렌지</li>
+        <li>망고</li>
+        <li>포도</li>
+        <li>바나나</li>
+        <li>복숭아</li>
+        <li>파인애플</li>
+    </ul>
+
+    <hr>
+
+    <!--요약어: div.food>div+p+p+span-->
+    <div class="food">
+        <div>짜장면</div>
+        <p>볶음밥</p>
+        <p>닭강정</p>
+        <span>짬뽕</span>
+    </div>
+
+    <hr>
+
+    <!-- 요약어 : .box-group>div*3 : div로 안써도 자동으로 div로 처리된다-->
+    <div class="box-group">
+        <div>1</div>
+        <div>2</div>
+        <div>3
+            <div>3-1</div>
+            <div>3-2</div>
+            <div>3-3</div>
+        </div>
+    </div>
+    
+</body>
+</html>

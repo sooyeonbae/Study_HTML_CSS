@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .container {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid green;
+            /*overflow: hidden; 구조를 다시해석해서 영역을 새롭게잡는다. (떠버린 자식클래스를 다시 인식)
+                                position 쓸때 문제될수도있음..., 진짜 overflow써야할때 못쓰게됨. 그러나 많이씀!*/
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid blue;
+            background-color: skyblue;
+            font-size: 50px;
+            float: left; 
+            /*-> 자식이 떠버려서 부모(컨테이너)가 비어버림...
+            1. 부모에게 overflow:hidden (정석은 아니지만 제일 많이씀)
+            2. 의미없는 div를 하나 새로 만들어서 clear 처리
+                (더 간단히) ->가상클래스 만들어서 부모요소이름에 붙여서...(정석) */
+        }
+
+        .clear-box {
+            clear: both;
+        }
+
+        /*가상 클래스 만들기*/
+        .clearfix::after {      /*clearfix:관리(암묵적 약속)  부모이름의 뒤에 달아서씀...*/
+            content:'';
+            display: block;
+            clear: both;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container clearfix">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <!-- <div class="clear-box"></div> -->
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+
+    <!--팁 ) 박스의 height크기와 line-height 수치를 똑같이 하면 수평정렬이 가능합니다.-->
+    <style>
+
+        * {
+            width: 100vw;
+        }
+
+        .box {
+            width: 100vw;
+            height: 90px;
+            background:  black;
+            text-align: center;
+        }
+
+
+        li {
+            width: 50px;
+            display: inline-block;
+            
+            line-height: 90px;
+ 
+        }
+
+        a{
+            color: aliceblue;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none; /*기본속성인 a태그 밑줄 없애기*/
+        }
+
+
+        .inner {
+            width: 100vw;
+            padding: 100px 10%;
+            box-sizing: border-box;
+            font-size: 90%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- nav.box>ul.menu>li*4>a -->
+    <nav class="box">
+        <ul class="menu">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <img src="../img/drugstore.jpeg" alt="drugstore">
+        <div class="inner">
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id ornare mauris, quis faucibus enim. Aenean tortor velit, fringilla eget dui eget, ullamcorper molestie metus. Proin suscipit porttitor diam ac faucibus. Suspendisse elementum dui nec ligula vulputate, eget suscipit diam mattis. Phasellus finibus tempus mollis. Nam id dolor tincidunt metus dignissim venenatis. Donec mollis massa vel erat maximus lobortis. Mauris laoreet nisi ac justo malesuada ultrices. Quisque sollicitudin convallis ex et gravida. Donec non consequat magna, viverra pharetra orci. Curabitur neque nisi, porta in orci at, interdum hendrerit dui.
+
+            Pro in eleifend, enim a finibus ornare, dui justo venenatis mauris, vitae consectetur nisi odio at felis. Fusce ut massa in nibh mollis maximus. In gravida sem at dapibus dignissim. Curabitur aliquam nulla justo, eu auctor nisl suscipit ut. Vivamus nec nisi nec augue interdum sodales. Praesent purus nisi, gravida in fermentum sed, congue vitae nulla. Pellentesque varius nibh metus, nec placerat dolor finibus et. Ut et accumsan nunc, non tempus tellus. Morbi iaculis mi hendrerit tellus elementum rhoncus.
+        </div>
+    </section>
+    
+    
+</body>
+</html>

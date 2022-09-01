@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[disabled] {   /*[속성]으로 지목*/
+            opacity: 0.4;   /* opacity : 투명도. (0(투명)~1(불투명))*/
+        }
+
+        input[type="password"] {
+            color:tomato;
+            width: 100px;
+        }
+
+        button[class^="btn-"] {  /*button태그중에 class이름이 btn으로 시작하는애들.  
+                                ^:~~로 시작한다면.  $:~~로 끝난다면*/
+            font-weight: bold;
+            border-radius: 20px;    /*모서리 둥그렇게 깎기*/
+        }
+
+        button[class$="success"] {
+            background: steelblue;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <input type="text" value="hello"> <!-- value : 입력창기본값-->
+    <input type="password" value="1234">
+    <input type="text" value="disable text" disabled> <!--disabled : 사용이불가능하게만들어버리기-->
+    <button class="btn-success">Success</button>
+    <button class="btn-danger">Danger</button>
+
+
+
+</body>
+</html>

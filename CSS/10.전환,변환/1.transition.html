@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background-color: orange;
+
+            /*transition*/
+            transition-property: width; 
+            /*width가 늘어나는 효과에 적용하겠다. 기본값 : all
+            background에는 transition 안줌->색은 바로 변하고 width만 느리게변한다.*/
+            transition-duration: 2s; 
+            /*전환효과를 2초동안 지속하겠다. 기본값:0s*/
+
+            /*background에 transition적용하기->width거는 적용안됨(마지막거만 적용된다.) */
+            transition-property: background;
+            transition-duration: 700ms; /*ms:밀리초. 0.7초*/
+
+            /*단축속성 
+            transition:속성, 지속시간, delay, 타이밍함수(전환효과를세밀하게)*/
+            transition: 2s cubic-bezier(0.6, -0.28, 0.735, 0.045) ; 
+            /*ease:처음에는 빠르고 나중에는 느려지게. 기본값
+            ease-in:느리다가 빨라지게
+            ease-out:빠르다가 느려지게(ease보다 더빠르게)
+            ease-in-out:느리게 빠르게 느리게
+            linear:일정하게
+            함수 사이트 : https://easings.net/ko */
+
+
+        }
+
+        .box:hover {
+            width: 300px;
+            background-color: skyblue;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="box">    </div>
+    
+</body>
+</html>

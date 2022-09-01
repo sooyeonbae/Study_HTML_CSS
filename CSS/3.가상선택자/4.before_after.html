@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul li::before { /* ul 안쪽의 li의 전 */
+            content : '번호';   /*문자 '번호' 붙이기*/
+            font-weight: bold;
+            color:tomato;
+            margin-right: 20px;  /*오른쪽여백*/
+        }
+
+        ul li::after {
+            content: ' ';    /*넣을내용은 따로 없다*/
+            width: 10px;
+            height: 10px;
+            background: tomato;
+            border-radius: 50%; /*모서리깎기*/
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!--단축어 : ul>li{$}*9 . $:자동으로 숫자삽입-->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+    
+</body>
+</html>

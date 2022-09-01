@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 2px solid gray;
+
+            background-color: lightblue;
+            background-image: url(./images/sky.jpg); /*사진이 박스 크기에 맞춰 잘려서 들어감*/
+            background-size: auto; 
+            /*(기본값:auto)
+            cover : 박스의 긴 너비에 맞춰 꽉 채워줌. 원본잘릴가능성있음
+            contain : 짧은너비에 맞추고 크기비율유지. 원본은 다 나오지만 빈공간발생하거나 반복될수있다.
+            200px 150px : 이 크기로 바둑판*/
+
+            background-repeat: no-repeat;  
+             /*반복여부. 
+             no-repeat
+             repeat-x : 가로반복
+             repeat-y : 세로*/
+
+            background-position:50% 30% ; 
+            /*가로축세로축 지정해서 그부분 나오게 - %,px,em으로 지정 가능
+            가로축만 사용하면 세로축은 가운데정렬
+            % -> 왼쪽상단이 0% 0%, 오른쪽하단이 100% 100%*/
+
+            /*background 단축속성
+            background: yellow url(./images/sky.jpg) no-repeat 0% 0% / cover; 
+                    색상 url repeat position / size     */
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grandparent {
+            width: 400px;
+            height: 300px;
+            padding: 100px;
+            border: 4px dashed gray;
+            position: relative;
+        }
+
+        .parent {
+            width: 300px;
+            height: 300px;
+            border: 4px dashed lightblue;
+            position: relative;
+        }
+
+        .child {
+            width: 120px;
+            height: 80px;
+            background-color: tomato;
+            border: 4px dashed yellow;
+            border-radius: 10px;
+            font-size: 30px;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 100px;
+            bottom: 150px;
+            /*부모(parent)기준으로 움직이게 하려면 원하는부모에게 position relative를 줘야한다.
+            여러개면 가장 가까이에 있는 부모에 영향을 받는다.
+            부모를 기준으로 두지 않으면 화면(뷰포트)기준으로 움직인다.
+            없어진 자리에 다른 박스가 차고올라온다.
+            
+            값을 두개(top/bottom , left/right) 모두 줘야한다. 변동없는곳에는 값 0으로 해서라도.*/
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">1</div>
+            <div class="child absolute">2</div>
+            <div class="child">3</div>
+        </div>
+    </div>
+    
+</body>
+</html>

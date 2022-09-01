@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-theme.css">
+
+    <style>
+        header {
+            height: 100px;
+            background-color: lightblue;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 10px auto;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        ul {
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 10px;
+            list-style: none;
+        }
+
+        #banner {
+            background-color: lightgray;
+            height: 200px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h2>그리드 시스템을 이용한 레이아웃</h2>
+        </header>
+
+        <div class="row">
+            <div id="menu" class="col-md-2">
+                <ul>
+                    <li>menu1</li>
+                    <li>menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>
+            </div>
+            <div id="content" class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Nullam sed turpis convallis massa convallis tristique. Etiam maximus diam dui, lacinia
+                            ullamcorper nisl aliquam id. In quis augue enim. Donec faucibus vel eros ut faucibus. Donec
+                            ut lacus ac diam placerat gravida vel congue purus. Duis ut libero felis. In sagittis eu
+                            ligula nec rhoncus. Cras vitae maximus est. Integer vitae nulla magna. Nulla maximus
+                            vulputate volutpat. Ut eget nunc orci.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Aenean vulputate scelerisque mollis. Integer molestie eros a leo tempor commodo. Sed tempor
+                            porttitor lacus, et semper odio mollis non. Proin id quam non eros pulvinar feugiat.
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas. Sed elementum arcu dui, ac feugiat mi posuere eget. Pellentesque tristique ipsum et
+                            enim blandit dapibus.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="banner" class="col-md-2">
+                여기는 기타 부가적인 배너 자리
+            </div>
+        </div>
+        <hr>
+        <footer>여기는 하단 footer 부분입니다. </footer>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

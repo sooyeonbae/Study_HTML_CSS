@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="./js/bootstrap.js"> 이건 밑에서 스크립트로 넣어야한다.-->
+
+</head>
+
+<body>
+
+    <!--모달 :  원래화면 닫히지 않고 어두워지면서 새로 작게 뜨는 창 -->
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#testModal">
+        모달창 열기
+    </button>
+                                <!--data어쩌고 : JS쪽 속성값 가져오기-->
+
+
+    <div id="testModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button> <!--&times : 모달창 끄는 X 기호-->
+                    <h4 class="modal-title">모달 제목</h4>
+                </div>
+                <div class="modal-body">
+                    <p>모달 내용은 어쩌구저쩌구 ... &hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+  
+
+    <!--제이쿼리 먼저 로딩하고 -> JS부트스트랩 로딩해야한다. (순서주의!! )-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    
+    
+    <script src="./js/bootstrap.js"></script>
+
+</body>
+
+</html>

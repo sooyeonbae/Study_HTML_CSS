@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        html{
+            font-size: 10px;
+        }        
+
+        body * {
+            border: 2px solid black;
+        }
+
+        /* em : 자기 폰트사이즈 기준. 폰트사이즈의 몇 배인지. 폰트사이즈 키우면 가로길이도 늘어난다.*/
+        .container {
+            width: 60em; /* 1em : 16px(html기본폰트사이즈), 60em:960px */
+            font-size: 20px; /* -> 1200px */
+        }
+ 
+        .parent {
+            width: 50%;
+            font-size: 2em; /*부모폰트사아즈(상속됨)의 2배 ->40px */
+        }
+
+        /* 정보확인 : 개발자모드 - computed탭 */
+        /* rem : html의 폰트대비 몇 배인지. 조금 더 고정적인 단위*/
+        .child {
+            width: 30%; 
+            font-size: 3rem; /* html폰트의 3배 */
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">Container
+        <div class="parent">Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+    
+</body>
+</html>

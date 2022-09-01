@@ -1,0 +1,192 @@
+/*----------reset css----------*/
+/* reset */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/*clearfix*/
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/* common */
+html {
+    font-size: 10px;
+}
+body {
+    font: 14px "NGothic", Arial, sans-serif;
+    background: #aaa;;
+}
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+
+/*----------h/w----------*/
+
+header {
+    width: 700px;
+    background-color: orange;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1,h2 {
+    color: white;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 70px;
+}
+
+header h2 {
+    font-size: 18px;
+    padding-bottom: 0px;
+}
+
+header h3 {
+    background: lightgray;
+    line-height: 1.5;
+    color: rgb(80, 80, 80);
+    font-weight: 200;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    margin-bottom: 0px;
+}
+
+.main-content {
+    width: 700px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.aside-left{
+    width: 25%;
+
+    float: left;
+    background-color: white;
+}
+
+.aside-left .artist {
+    background-color: rgb(189, 68, 68);
+    line-height: 2.5;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 530;
+    text-indent:15px;
+}
+
+.aside-left ul {
+    padding: 0px;
+}
+.aside-left ul li {
+    list-style: none;
+    text-decoration: underline;
+    padding: 0px;
+    margin: 20px 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.box {
+    width: 50%;
+    background-color: rgb(223, 221, 221);
+    float: left;
+}
+
+.box p.title {
+    background-color: rgb(47, 71, 124);
+    font-size: 15px;
+    line-height: 1.8;
+    color: white;
+    margin: 10px;
+    text-indent: 10px;
+}
+
+div.box p.painter {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(47, 71, 124);
+    text-indent: 10px;
+    margin-top: 25px;
+
+}
+
+div.box p.detail {
+    font-size: 13px;
+    color: rgb(47, 71, 124);
+    text-indent: 3px;
+    margin: 20px 20px;
+}
+
+
+.aside-right {
+    width: 25%;
+    float: right;
+    background-color: white;
+}
+
+.right-box h4 {
+    font-size: 20px;
+    color: rgb(171, 171, 171);
+    margin: 10px 0 3px 10px;
+}
+
+.right-box h5 {
+    font-size: 20px;
+    color: orange;
+    margin: 0 0 3px 10px;
+}
+
+.right-box h6 {
+    font-size: 16px;
+    color: black;
+    margin: 0 0 3px 10px;
+}
+
+.aside-right ul {
+    list-style: none;
+    margin: 25px 0 0 10px;
+    padding: 0px;
+}
+
+.aside-right a {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.aside-right p {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    width: 700px;
+    clear: both;
+    margin: 0 auto;
+    background-color: rgb(47, 71, 124);
+}
+
+address {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    font-style: normal;
+    line-height: 3;
+}
+
+address a {
+    text-decoration: underline;
+}
+
+
+
+
+

@@ -1,0 +1,72 @@
+<!--스크롤할때 배경이미지 어떻게할지-->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            height: 3000px;
+        }        
+
+        .box {
+            width: 90%;
+            height: 200px;
+            margin: 200px auto 0;
+            overflow: auto;
+
+            background-image: url(./images/sky.jpg);
+            background-size: 300px 200px;
+            background-repeat: no-repeat;
+
+            background-attachment: local;
+            /* scroll : 배경이미지가 요소를 따라 같이 스크롤됨 - 박스안에 이미지가 고정되어 있는것처럼 (기본값)
+            fixed : 배경이미지가 뷰포트에 고정되어 요소와 같이 스크롤되지 않음. -박스에 상관없이 화면에 고정 
+            local : 요소 내 스크롤시 배경이미지가 같이 스크롤됨. - 박스 내에서 스크롤에따라 같이 움직인다*/
+            /*단축속성의 맨 끝*/
+
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="box">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet risus vitae turpis dictum
+            tempor. Cras at arcu elit. Phasellus rutrum viverra metus auctor iaculis. Maecenas eu bibendum sapien, vitae
+            accumsan est. Aliquam suscipit sodales vehicula. Mauris odio erat, vehicula et condimentum at, vehicula
+            vehicula purus. Aliquam erat volutpat. Praesent vitae nulla et velit egestas vulputate sagittis et tellus.
+            Duis pellentesque erat sem, eu maximus lacus fringilla eu. Phasellus arcu odio, dictum eu gravida eget,
+            auctor ac tellus. Aenean pulvinar tortor ex, eget pretium sem elementum vel. Sed mollis consectetur dui quis
+            finibus. Ut sit amet urna vel risus consectetur porta sed eget orci. Integer commodo, enim id pulvinar
+            venenatis, ligula ex pretium urna, id efficitur neque lectus id felis. Pellentesque maximus turpis ac lacus
+            lacinia porttitor. Quisque mattis id orci in cursus.
+
+            Praesent congue tristique libero. Nullam sit amet metus a tortor lobortis volutpat et et mi. Sed
+            ullamcorper, dui et hendrerit mattis, lectus ipsum finibus est, nec aliquet sapien ipsum ullamcorper tortor.
+            In vel justo a lectus pretium fringilla. Nunc tincidunt pharetra neque, ac pretium nibh cursus sit amet.
+            Etiam vel consectetur dui, sit amet varius ante. Donec bibendum ultricies augue ac volutpat. Ut eget euismod
+            ante, nec ullamcorper lacus. Duis a pellentesque neque. Curabitur vestibulum varius varius. Vestibulum
+            faucibus metus eu erat commodo, at vehicula eros ornare. Cras id lobortis orci. Vestibulum vestibulum ipsum
+            viverra, malesuada lacus et, tincidunt erat. Aliquam sodales rhoncus condimentum.
+
+            Nulla laoreet dignissim nibh, in semper velit pharetra dignissim. Ut sodales feugiat lacus quis molestie.
+            Integer dapibus sodales arcu nec facilisis. Etiam faucibus turpis est, eget volutpat lorem scelerisque sit
+            amet. Nulla in risus non turpis viverra fermentum quis vitae velit. Phasellus vel mi iaculis, consequat elit
+            sed, egestas magna. Curabitur congue pulvinar nunc, ut pharetra risus convallis sed.
+        </p>
+    </div>
+
+</body>
+
+</html>

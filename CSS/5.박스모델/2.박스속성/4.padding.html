@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+            border: 10px solid #000;  
+            padding: 30px;  /* padding : 박스와 border 사이의 거리가 벌어진다. ->박스가 늘어짐.값은 그대로지만...*/
+
+            box-sizing: border-box; /* box sizea를 border기준으로 하겠다 : 패딩을 줘도 박스값 유지(콘텐츠만 줄어듦)
+                                        디폴트 : 컨텐트박스 */
+
+            /* box-sizing : 박스의 크기를 어떤 것을 기준으로 계산할지를 결정
+            border-box - 테두리(경계선)를 기준으로 크기 정한다.
+            content-box(default) - 내부요소를 기준으로 크기 정한다.
+            padding은 내부요소와 경계선과의 거리를 벌리는 속성이기때문에 그만큼 박스크기가 증가한다.*/
+
+
+
+            /* 단축속성 사용시 
+            padding : 값 4개-> 위 오른쪽 아래 왼쪽 (시계방향)
+                     값 3개-> 위 [좌우] 아래
+                     값 2개-> [상하] [좌우]
+                     값 1개-> [상하좌우] (전체)
+            특정한곳에 하려면 - 지정안하는곳 값에 0 넣거나 아니면 그냥 방향지정해서 적거나...
+            */
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">하이하이용 Hello World!</div>
+    
+</body>
+</html>

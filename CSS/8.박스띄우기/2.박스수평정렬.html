@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 150px;
+            height: 100px;
+            background-color: steelblue;
+            font-size: 30px;
+            color: aliceblue;
+            margin: 10px;
+            float: left; /*떠있는거라 밑에 new-box와 겹치게됨.*/
+        }
+
+        .new-box {
+            width: 200px;
+            height: 150px;
+            background-color: orange; 
+            /*float이 아니라 밑에 겹치게됨 -> clear 써서 앞에 float된애들이 떨어짐
+            left,right 방향 같게 설정해줘야한다. (both도 있음)*/
+            clear: both;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="new-box">4</div>
+    
+</body>
+</html>

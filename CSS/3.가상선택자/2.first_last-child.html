@@ -1,0 +1,36 @@
+<!--Pseudo(수도: 가짜)클래스 선택자 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .fruits > li:first-child {    /* fruits클래스의 자식인 li중에서 첫번재*/
+            color:red;
+        }
+
+        .fruits > li:last-child {
+            color:blueviolet;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <ul class="fruits">
+        <li>딸기</li>
+        <li>사과</li>
+        <li>오렌지</li>
+        <li>망고</li>
+        <li>포도</li>
+    </ul>
+
+    
+</body>
+</html>

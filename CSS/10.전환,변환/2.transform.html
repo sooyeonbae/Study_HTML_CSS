@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div[class^="box"] {/* ^:class이름이 box로 시작된다면 */
+            width: 200px;
+            height: 200px;
+            background-color: steelblue;
+            margin: 50px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            transition: 2s;  /*transform이 변환되는 시간*/
+        }
+
+        /*transform : 함수를이용해서 변환 설정*/
+        .box1:hover {
+            transform: rotate(-720deg); /*ratate(각도) : 각도만큼 돌아라(양수:오른쪽,음수:왼쪽)*/
+        }
+
+        .box2:hover {
+            transform: translateX(100px); /*X축(가로)로 100px이동해라.*/
+            transform: translate(100px, -50px) /*(X축이동값, Y축이동값)*/
+        }
+
+        .box3:hover {
+            transform: scale(0.7, 1.5); /*가로로 0.7, 세로로 1.5커져라*/
+        }
+
+        .box4:hover {
+            transform: skew(0, 30deg); /*각도만큼 기울여라*/
+        }
+
+        .box5:hover {   /*여러가지 속성 한번에 가능*/
+            transform: translate(30px, -20px) scale(0.7) rotate(720deg);
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5">5</div>
+    
+</body>
+</html>

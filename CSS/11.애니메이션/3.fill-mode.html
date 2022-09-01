@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            border-radius: 10px;
+            margin: 30px;
+
+            animation: move 2s 2s both;     
+            
+            /*animation-fill-mode (기본값:none - 원래자리에서 애니메이션 시작위치로 이동, 진행 후 끝나면 다시 원래자리로)*/
+            animation-fill-mode: forwards;  /*애니메이션이 종료되는 자리에서 끝나버린다.*/
+            animation-fill-mode: backwards; /*애니메이션 시작위치에서 시작, 종료되면 원래자리로.*/
+            animation-fill-mode: both; /*기존자리 무시. 애니메이션의 시작 끝 위치로만 진행*/
+        
+            /*단축속성의 맨마지막에 적어준다.*/
+
+            /*
+            animation-fill-mode
+            none : 기존 위치에서 시작 -> 애니메이션 시작 위치 이동 -> 애니메이션 동작 -> 기존위치로 가서 종료.
+            forwards : 기존 위치에서 시작 ->애니메이션 시작 위치 이동 -> 애니메이션 동작 -> 애니메이션 종료 위치에서 종료.
+            backwards : 애니메이션 시작위치에서 시작 -> 동작 후 기존위치로 이동 후 종료.
+            both : 애니메이션 시작 위치에서 시작 -> 동작 후 애니메이션 종료 지정에서 종료.
+            */
+
+
+        }
+
+   
+        
+        @keyframes move {
+            0% {
+                transform: translate(100px, 100px);
+                background-color: dodgerblue;
+            }
+
+            100% {
+                transform: translate(300px, 100px);
+                background-color: yellowgreen;
+            }
+            
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box"></div>
+    
+</body>
+</html>

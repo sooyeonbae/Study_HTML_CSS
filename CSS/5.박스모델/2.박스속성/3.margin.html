@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    /* margin : 바깥쪽 여백. 요소와 요소와의 거리
+    박스의 위(top),아래(bottom),좌(left),우(right)
+    부모기준 */
+
+        .container {
+            width: 400px;
+            height: 200px;
+            border: 4px solid orange;
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            border: 4px solid greenyellow;
+            margin-top: 20px;
+            margin-left: 50%;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            border: 4px solid #143;
+
+        }
+
+
+        /* */
+        .outer {
+            background: cornflowerblue;
+            height: 100px;
+        }
+
+        .inner {
+            width: 70%;
+            height: 100px;
+            background: tomato;
+            /* 단축속성 사용시 
+            margin : 값 4개-> 위 오른쪽 아래 왼쪽 (시계방향)
+                     값 3개-> 위 [좌우] 아래
+                     값 2개-> [상하] [좌우]
+                     값 1개-> [상하좌우] (전체)
+            특정한곳에 하려면 - 지정안하는곳 값에 0 넣거나 아니면 그냥 방향지정해서 적거나...
+            */
+            margin: 100px 200px;   
+            margin: 0 auto;  /*상하는 값안주고, 좌우는 오토로 나눠서 가운데정렬(픽셀계산할필요없음)*/
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+
+        <!-- 요약어 : .container>.box$*2 -->
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+</body>
+</html>

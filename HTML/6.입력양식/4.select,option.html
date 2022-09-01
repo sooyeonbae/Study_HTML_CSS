@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+        <select name="drink">
+            <optgroup label="Coffee"> <!--옵션을 그룹화하기-->
+                <option value="ame">Americano</option><!--value 선택하지 않으면 그냥 보여지는글자 넘어간다. 전송내용다르면 value값 적어줘야한다.-->
+                <option value="esp">Espresso</option>
+                <option value="cl">Caffe Latte</option>
+                <option value="capp">Cappuccino</option>
+            </optgroup>
+
+            <optgroup label="Juice">
+                <option >Orange Juice</option>
+                <option >Apple Juice</option>
+                <option >Grape Juice</option>
+            </optgroup>
+
+        </select>
+
+        <br><br><br>
+
+        <input type="text" list="fruits">
+        <datalist id="fruits"> <!--위에 인풋창과 연계. 선택도 되고 직접입력도 가능-->
+            <option>Apple</option>
+            <option>Orange</option>
+            <option>Mango</option>
+            <option>Pineapple</option>
+            <option>Grape</option>
+            <option>Watermelon</option>
+        </datalist>
+
+    </form>
+    
+</body>
+</html>

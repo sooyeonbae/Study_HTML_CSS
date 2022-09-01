@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        span {
+            display: block; /*인라인요소를 블록요소처럼 ->width,height가 먹힘 */
+            width: 100px;
+            height: 100px;
+            background: steelblue;
+        }
+
+        a{
+            display: inline-block; /*인라인요소면서 블록처럼 가로세로너비 지정가능, 인라인 가로배치가능도 그대로.*/
+            width: 100px;
+            height: 100px;
+            background: cornflowerblue;
+        }
+
+        .box {
+            height: 100px;
+            background: lightblue;
+            margin-top: 40px;
+        }
+
+        .box > input:nth-child(2) {
+            display: none; /*안보이게 ex.접었다펴는기능*/
+        }
+
+        .hide {
+            /*display: none;*/
+            opacity: 0; /*클릭 버튼 안움직이게하는 야매방법*/
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <span>display 속성 공부</span>
+
+    <a href="#">게시판</a>
+    <a href="#">방명록</a>
+
+    <div class="box">
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+        <input type="text" value="6">
+    </div>
+    <br>
+    <button class="btn"> 클릭! </button>
+
+    <script>
+        const $box = document.querySelector('.box');
+        const $btn = document.querySelector('.btn');
+
+        $btn.onclick = () => {
+            $box.classList.toggle('hide');
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+
+        body {
+            background-image: url(./img/bg.png)
+        }
+
+        header .logo {
+            display: block;
+            width: 100%
+            margin: 20px auto;
+            /*div는 가운데로 왔지만 
+            content가 100%를 가지고있어서 좌우auto는 안먹힘
+            -> text-align: center;*/
+            text-align: center;
+
+        }
+
+        nav .menu {
+            text-align: center;
+            background-color: black;
+        }
+
+        .menu li {
+            display: inline-block;
+            padding: 20px;
+        }
+
+        .menu li:hover {
+            background: gray;
+        }
+        
+        .menu li a{
+            text-align: center;
+            font-size: 24px;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .slider {
+            background: white;
+        }
+
+        .slider ul {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .slider li{
+            background-color: white;
+            width: 25%;
+            float:left;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .left {
+            float: left;
+        }
+        
+        .right {
+            float: right;
+        }
+
+
+
+        .top {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right:0;
+            top:0 ;
+            float: right;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .top a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            clear: both;
+        }
+
+        .content .img{
+            width: 40% ;
+            margin-left: 20%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./img/logo.jpg" alt="로고">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+  <article class="slider">
+    <ul class="clearfix">
+        <li><img src="./img/item01.png" alt="iPhone"><br>iPhone</li>
+        <li><img src="./img/item02.png" alt="iPod"><br>iPod</li>
+        <li><img src="./img/item03.png" alt="iPad"><br>iPad</li>
+        <li><img src="./img/item04.png" alt="iMac"><br>iMac</li>
+    </ul>
+
+    <section>
+        <div class="content">
+            <img src="./img/ipad.jpg" alt="content">
+        </div>
+        <aside class="left">
+            <img src="./img/side01.png" alt="side01">
+            <br><br>
+            <img src="./img/side02.png" alt="side02">
+        </aside>
+        <aside class="right">
+            <img src="./img/side03.png" alt="side03">
+            <br><br>
+            <img src="./img/side04.png" alt="side04">
+        </aside>
+    </section>
+
+    <div class="top">
+        <a href="#">TOP</a>
+    </div>
+
+</body>
+</html>

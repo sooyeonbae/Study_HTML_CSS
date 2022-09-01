@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판글쓰는페이지</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+    <!----------헤더----------->
+    <header>
+        <!--container-fluid 요소는 가로 해상도와 상관없이 항상 100%의 width를 가집니다. -->
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar">
+                    <!-- 부트스트랩-메뉴관련 -->
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <!--디자인이 작아졌을때 메뉴들 아래로 내려올 수 있도록 하는 버튼(부트스트랩의 자바스크립트)-->
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#"><img width="30px" src="./img/logo.svg" alt="logo"></a>
+                            <!--로고-->
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">MAIN</a></li>
+                                <li><a href="#">FORM</a></li>
+                                <li><a href="#">GRID BOARD</a></li>
+                                <li><a href="#">BOARD</a></li>
+                            </ul>
+
+                            <!--드롭다운 방식으로 로그인 추가-->
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">로그인
+                                        <span class="caret"></span>
+                                        <!--작은화살표-->
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Join</a></li>
+                                        <!--부트스트랩에서 제공하는 아이콘(다른데꺼써도된다.)-->
+                                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <!--검색창 배치하기-->
+                            <form class="navbar-form navbar-right " action="#">
+                                <div class="input-group"><input type="text" class="form-control" placeholder="검색">
+                                    <div class="input-group-btn"><button type="submit"
+                                            class="btn btn-primary">검색</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-------------------------------------------------------->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 write-wrap">
+                    <div class="titlebox">
+                        게시판 글쓰기
+                    </div>
+                    <form action="#">
+                        <table class="table">
+                            <tbody class="t-control">
+                                <tr>
+                                    <td class="t-title">NAME</td>
+                                    <td>
+                                        <input type="text" class="form-control write-name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t-title">TITLE</td>
+                                    <td>
+                                        <input type="text" class="form-control write-title">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t-title">COMMENT</td>
+                                    <td>
+                                        <input type="text" class="form-control write-comment">
+                                        <!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+                                        <!--선생님거 : textarea-->
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </form>
+                    <div class="titlefoot">
+                        <button type="button" class="btn btn-submit">등록</button>
+                        <!--type submit 쓸수없음 (form태그 외부에 있기 때문에!!!)(JS쓰면되긴함)-->
+                        <button type="button" class="btn btn-list">목록</button>
+                        <!--button type 지정안해주면 submit으로 자동지정되기때문에 
+                            다른역할인거는 type="button"꼭써주기-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!------------footer------------>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-12 ">
+                    <div class="copyright">
+                        <!--부트스트랩클래스아님-->
+                        <a href="#">
+                            <img width="20px" src="./img/logo.svg" alt="logo2">
+                        </a>
+                        BootStrap | 대표자 : 홍길동 | E-mail : info@info.com<br>
+                        사업자번호 : 123-45-67890 | 개인정보보호책임자 : 홍길동 | 통신판매업 : 2022-서울강남-0001<br>
+                        주소 : 서울특별시 강남구 어쩌고 저쩌고
+                        <address>&copy;Bootstrap. ALL RIGHTS RESERVED</address>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 text-right">
+                    <!--퀵메뉴-->
+                    <ul class="footer-menu">
+                        <!--부트스트랩클래스아님-->
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!--제이쿼리-부트스트랩자바스크립트-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+
+    <script src="./js/bootstrap.js"></script>
+
+</body>
+
+</html>
